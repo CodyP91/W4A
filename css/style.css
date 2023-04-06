@@ -57,14 +57,19 @@ main {
     }
 }
 @media screen and (min-width: 1024px) {
-    .grid-item {
-        display: flex;
+    .product .grid-item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
         align-items: center;
-        justify-content: space-between;
     }
 
-    .grid-item:nth-child(even) {
-        flex-direction: row-reverse;
+    .product .grid-item:nth-child(2) {
+        direction: rtl;
+    }
+
+    .product .grid-item:nth-child(2) img,
+    .product .grid-item:nth-child(2) p {
+        direction: ltr;
     }
 }
 .product .grid-item {
